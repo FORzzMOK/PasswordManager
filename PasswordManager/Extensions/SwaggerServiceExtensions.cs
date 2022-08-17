@@ -34,27 +34,12 @@ namespace PasswordManager.Extensions
                 }
             };
 
-            var contact = new OpenApiContact()
-            {
-                Name = "Mohamad Lawand",
-                Email = "hello@mohamadlawand.com",
-                Url = new Uri("http://www.mohamadlawand.com")
-            };
-
-            var license = new OpenApiLicense()
-            {
-                Name = "Free License",
-                Url = new Uri("http://www.mohamadlawand.com")
-            };
-
             var info = new OpenApiInfo()
             {
                 Version = "v1",
                 Title = "Minimal API - JWT Authentication with Swagger demo",
                 Description = "Implementing JWT Authentication in Minimal API",
-                TermsOfService = new Uri("http://www.example.com"),
-                Contact = contact,
-                License = license
+                TermsOfService = new Uri("http://www.example.com")
             };
 
             services.AddSwaggerGen(c =>

@@ -52,7 +52,7 @@ namespace TokenApp.Controllers
                         expires: DateTime.UtcNow.AddMinutes(100),
                         signingCredentials: signIn);
 
-                    return Ok(new JwtSecurityTokenHandler().WriteToken(token));
+                    return Ok($"Bearer {new JwtSecurityTokenHandler().WriteToken(token)}");
                 }
                 else
                 {
